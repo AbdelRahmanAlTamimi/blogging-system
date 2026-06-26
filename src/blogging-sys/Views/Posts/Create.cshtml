@@ -1,0 +1,17 @@
+@model PostFormViewModel
+@{
+    ViewData["Title"] = "Create Post";
+}
+
+<h1 class="h3 mb-3">Create Post</h1>
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <partial name="_PostForm" model="Model" />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,57 @@
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<div class="row justify-content-center my-5">
+    <div class="col-md-5">
+        <div class="card shadow border-0 rounded-3">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <h1 class="h3 fw-bold mt-2">Create Account</h1>
+                    <p class="text-muted">Get started by creating a free account</p>
+                </div>
+
+                <form asp-action="Register" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="Name" class="form-control rounded-3" placeholder="John Doe" required autocomplete="name" />
+                        <label asp-for="Name">Full Name</label>
+                        <span asp-validation-for="Name" class="text-danger small"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="Email" class="form-control rounded-3" placeholder="name@example.com" required autocomplete="email" />
+                        <label asp-for="Email">Email address</label>
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="Password" type="password" class="form-control rounded-3" placeholder="Password" required autocomplete="new-password" />
+                        <label asp-for="Password">Password</label>
+                        <span asp-validation-for="Password" class="text-danger small"></span>
+                    </div>
+
+                    <div class="form-floating mb-4">
+                        <input asp-for="ConfirmPassword" type="password" class="form-control rounded-3" placeholder="Confirm Password" required autocomplete="new-password" />
+                        <label asp-for="ConfirmPassword">Confirm Password</label>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                    </div>
+
+                    <button class="w-100 btn btn-lg btn-primary rounded-3 py-2" type="submit">Create Account</button>
+                </form>
+
+                <hr class="my-4 text-muted">
+
+                <div class="text-center">
+                    <p class="text-muted mb-0">Already have an account? <a asp-action="Login" class="text-decoration-none">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

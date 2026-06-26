@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="p-5 mb-4 bg-body-tertiary rounded-3 border">
+    <div class="container-fluid py-4">
+        <h1 class="display-5 fw-bold">Blogging System</h1>
+        <p class="col-md-8 fs-5">
+            A simple blog built with <strong>ASP.NET Core MVC</strong> and
+            <strong>Entity Framework Core</strong> (MySQL). Create, read, update,
+            and delete posts &mdash; rebuilt from the original Laravel project.
+        </p>
+        <a class="btn btn-primary btn-lg" asp-controller="Posts" asp-action="Index">
+            View all posts &rarr;
+        </a>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">📝 Manage posts</h5>
+                <p class="card-text">Full CRUD: create, edit, and delete posts, each authored by a user.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">🔎 Search &amp; pagination</h5>
+                <p class="card-text">Filter posts by title and page through results from the list view.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">✅ Validation</h5>
+                <p class="card-text">Server-side rules mirror the Laravel original: title min 3, description min 5.</p>
+            </div>
+        </div>
+    </div>
+</div>
