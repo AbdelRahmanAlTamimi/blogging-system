@@ -1,9 +1,8 @@
 # Blogging System (ASP.NET Core MVC)
 
-A simple CRUD blog built with **ASP.NET Core MVC** and **Entity Framework Core** (MySQL).
-It is a rebuild of the original Laravel blogging project, mapping the same
-Posts + Users data model and CRUD behavior onto the .NET stack, plus a few practical
-enhancements (search, pagination, sample-data seeding).
+The **Blogging System** is a CRUD-based blog application built with **ASP.NET Core MVC** and **Entity Framework Core (MySQL)**.
+
+The application maps a Posts and Users relational data model, providing core CRUD behavior alongside features such as search filtering, pagination, server-side model validation, and database seeding.
 
 ## Features
 
