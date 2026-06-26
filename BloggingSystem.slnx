@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/blogging-sys/BloggingSystem.csproj" />
+  </Folder>
+</Solution>
